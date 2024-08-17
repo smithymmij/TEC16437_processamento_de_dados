@@ -1,0 +1,44 @@
+/* Define o estilo do corpo da página */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+/* Estiliza o título principal */
+h1 {
+    color: #007bff;
+    margin-bottom: 20px;
+}
+
+/* Estiliza o formulário */
+form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Estiliza os rótulos dos campos do formulário */
+label {
+    font-weight: bold;
+}
+
+/* Estiliza os campos de entrada de dados */
+input[type="number"] {
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0 15px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+/* Estili

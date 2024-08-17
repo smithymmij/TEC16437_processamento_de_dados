@@ -1,0 +1,31 @@
+a = int(input("Informe lado A: "))
+b = int(input("Informe lado B: "))
+c = int(input("Informe lado C: "))
+
+print()
+
+if a == 0 or b == 0 or c == 0:
+    print("Não compõem triângulo")
+
+else:
+    if a == b == c:
+        print("Triângulo Equilátero")
+    elif a == b or b == c or a == c:
+        print("Triângulo Isósceles")
+    else:
+        print("Triângulo Escaleno")
+
+
+
+CRIAR UM AMBIENTE VIRTUAL
+python -m venv venv
+
+ATIVAR
+venv\Scripts\activate
+
+INTALAR FLASK
+pip install flask
+
+EXECUTAR
+python app.py
+

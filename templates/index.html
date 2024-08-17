@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Verificador de Triângulos</title>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    </head>
+<body>
+    <h1>Verificador de Triângulos</h1>
+    <form action="/check_triangle" method="post">
+        <label for="lado_a">Lado A:</label>
+        <input type="number" id="lado_a" name="lado_a" required><br><br>
+
+        <label for="lado_b">Lado B:</label>
+        <input type="number" id="lado_b" name="lado_b" required><br><br>
+
+        <label for="lado_c">Lado C:</label>
+        <input type="number" id="lado_c" name="lado_c" required><br><br>
+
+        <input type="submit" value="Verificar">
+    </form>
+
+    {% if resultado %}
+        <h2>Resultado: {{ resultado }}</h2>
+    {% endif %}
+</body>
+</html>
