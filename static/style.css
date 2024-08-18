@@ -10,20 +10,39 @@ body {
     align-items: center;
     justify-content: center;
     height: 100vh;
+    min-height: 100vh; /* Garante que a altura mínima da página seja a altura da viewport */
 }
 
-/* Estiliza o título principal */
-h1 {
-    color: #007bff;
-    margin-bottom: 20px;
+/* Estiliza o topo (header) */
+header {
+    background-color: #007bff;
+    color: #fff;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    
 }
 
-/* Estiliza o formulário */
-form {
+/* Estiliza o título principal no topo */
+header h1 {
+    margin: 0;
+}
+
+/* Estiliza o conteúdo principal (main) */
+main {
     background-color: #fff;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px; /* Ajusta a largura máxima do conteúdo principal */
+    margin: 0 auto; /* Centraliza o conteúdo */
+}
+
+/* Estiliza o formulário */
+form {
+    margin: 0 auto;
+    padding: 20px;
 }
 
 /* Estiliza os rótulos dos campos do formulário */
@@ -37,8 +56,4 @@ input[type="number"] {
     padding: 8px;
     margin: 5px 0 15px 0;
     border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-}
-
-/* Estili
+    border
