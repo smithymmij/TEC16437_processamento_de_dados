@@ -4,49 +4,54 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Verificador de Triângulos</title>
-        <!-- Inclui o CSS do Bootstrap -->
-        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
         <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
     </head>
-<body>
-    <header class="bg-primary text-white text-center py-3">
-        <h1>Verificador de Triângulos</h1>
-    </header>
-
-    <main class="container mt-4">
-        <form action="/check_triangle" method="post">
-            <div class="form-group">
-                <label for="lado_a">Lado A:</label>
-                <input type="number" id="lado_a" name="lado_a" class="form-control" required>
+    <body>
+        <header class="bg-primary text-white text-center py-3">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 text-left">
+                        <h5>TEC16437 - PROCESSAMENTO DE DADOS</h5>
+                    </div>
+                    <div class="col-md-6 text-right">
+                        <h5>Engenharia de Produção</h5>
+                    </div>
+                </div>
             </div>
+        </header>
+        
+        <main class="container my-4">
+            <h1 class="text-center mb-4">Página 86 - Verificador de Triângulos</h1>
+            <form action="/check_triangle" method="post">
+                <div class="form-group">
+                    <label for="lado_a">Lado A:</label>
+                    <input type="number" id="lado_a" name="lado_a" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="lado_b">Lado B:</label>
+                    <input type="number" id="lado_b" name="lado_b" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="lado_c">Lado C:</label>
+                    <input type="number" id="lado_c" name="lado_c" class="form-control" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Verificar</button>
+            </form>
 
-            <div class="form-group">
-                <label for="lado_b">Lado B:</label>
-                <input type="number" id="lado_b" name="lado_b" class="form-control" required>
+            {% if resultado %}
+                <h2 class="text-center mt-4">Resultado: {{ resultado }}</h2>
+            {% endif %}
+        </main>
+        
+        <footer class="bg-primary text-white text-center py-3">
+            <div class="container">
+                <p class="mb-0">&copy; 2024 Desenvolvido por Maria Gabriela & Jimmy Smith. Todos os direitos reservados.</p>
             </div>
-
-            <div class="form-group">
-                <label for="lado_c">Lado C:</label>
-                <input type="number" id="lado_c" name="lado_c" class="form-control" required>
-            </div>
-
-            <button type="submit" class="btn btn-primary">Verificar</button>
-        </form>
-
-        {% if resultado %}
-            <div class="mt-4 alert alert-info">
-                <h2>Resultado: {{ resultado }}</h2>
-            </div>
-        {% endif %}
-    </main>
-
-    <footer class="bg-primary text-white text-center py-3 mt-4">
-        <p>&copy; 2024 Verificador de Triângulos. Todos os direitos reservados.</p>
-    </footer>
-
-    <!-- Inclui o JavaScript do Bootstrap e suas dependências -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-</body>
+        </footer>
+        
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    </body>
 </html>
