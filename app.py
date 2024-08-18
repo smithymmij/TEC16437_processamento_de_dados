@@ -13,14 +13,15 @@ def check_triangle():
     b = int(request.form['lado_b'])
     c = int(request.form['lado_c'])
 
-    if a == 0 or b == 0 or c == 0 or a + b <= c or a + c <= b or b + c <= a:
+    if a == 0 or b == 0 or c == 0:
         resultado = "Não compõem triângulo"
-    elif a == b == c:
-        resultado = "Triângulo Equilátero"
-    elif a == b or b == c or a == c:
-        resultado = "Triângulo Isósceles"
     else:
-        resultado = "Triângulo Escaleno"
+        if a == b == c:
+            resultado = "Triângulo Equilátero"
+        elif a == b or b == c or a == c:
+            resultado = "Triângulo Isósceles"
+        else:
+            resultado = "Triângulo Escaleno"
 
     return render_template('index.html', resultado=resultado)
 
